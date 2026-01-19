@@ -1,0 +1,17 @@
+services:
+  pihole:
+    image: pihole/pihole:latest
+    container_name: pihole
+    restart: always
+    ports:
+      - "53:53/tcp"   # DNS TCP
+      - "53:53/udp"   # DNS UDP
+      - "8095:80"     # Web interface
+    environment:
+      - TZ=${TZ}
+      - WEBPASSWORD=${PIHOLE_PASSWORD}
+    volumes:
+      - ${VOLUME_ROOT}/pihole/etc:/etc/pihole
+      - ${VOLUME_ROOT}/pihole/dnsmasq:/etc/dnsmasq.d
+    networks:
+      - homelab-network
