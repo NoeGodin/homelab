@@ -1,0 +1,19 @@
+services:
+  scrutiny:
+    image: ghcr.io/analogj/scrutiny:master-omnibus
+    container_name: scrutiny
+    restart: always
+    ports:
+      - "8086:8080"
+    cap_add:
+      - SYS_RAWIO
+      - SYS_ADMIN
+    # Uncomment and add drives to monitor
+    # devices:
+    #   - "/dev/sda:/dev/sda"
+    volumes:
+      - /run/udev:/run/udev:ro
+      - ${VOLUME_ROOT}/scrutiny/config:/opt/scrutiny/config
+      - ${VOLUME_ROOT}/scrutiny/influxdb:/opt/scrutiny/influxdb
+    networks:
+      - homelab-network
