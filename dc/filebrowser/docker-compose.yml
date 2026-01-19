@@ -1,0 +1,13 @@
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: filebrowser
+    restart: always
+    ports:
+      - "8090:80"
+    volumes:
+      - ${DATA_ROOT}:/srv
+      - ${VOLUME_ROOT}/filebrowser/filebrowser.db:/database.db
+      - ${EXTERNAL_SSD}:/ssd
+    networks:
+      - homelab-network
