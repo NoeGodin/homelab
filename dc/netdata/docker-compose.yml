@@ -1,0 +1,20 @@
+services:
+  netdata:
+    image: netdata/netdata:latest
+    container_name: netdata
+    restart: always
+    ports:
+      - "19999:19999"
+    cap_add:
+      - SYS_PTRACE
+      - SYS_ADMIN
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - ${VOLUME_ROOT}/netdata/config:/etc/netdata
+      - ${VOLUME_ROOT}/netdata/lib:/var/lib/netdata
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - homelab-network
