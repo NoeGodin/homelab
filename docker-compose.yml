@@ -1,0 +1,39 @@
+include:
+  # --- Administration & Access ---
+  - dc/nginx-proxy-manager/docker-compose.yml
+  - dc/heimdall/docker-compose.yml
+  - dc/portainer/docker-compose.yml
+
+  # --- Network & Security ---
+  - dc/gluetun/docker-compose.yml
+  - dc/pihole/docker-compose.yml
+
+  # --- Media Pipeline ---
+  - dc/qbittorrent/docker-compose.yml
+  - dc/prowlarr/docker-compose.yml
+  - dc/flaresolverr/docker-compose.yml
+  - dc/radarr/docker-compose.yml
+  - dc/bazarr/docker-compose.yml
+  - dc/jellyfin/docker-compose.yml
+  - dc/jellyseerr/docker-compose.yml
+  - dc/filebrowser/docker-compose.yml
+
+  # --- Monitoring ---
+  - dc/netdata/docker-compose.yml
+  - dc/scrutiny/docker-compose.yml
+
+  # --- Security & Updates ---
+  - dc/watchtower/docker-compose.yml
+
+  # --- Development Tools ---
+  - dc/code-server/docker-compose.yml
+
+# Define common networks
+networks:
+  homelab-network:
+    name: homelab-network
+    driver: bridge
+
+  vpn-network:
+    name: vpn-network
+    driver: bridge
