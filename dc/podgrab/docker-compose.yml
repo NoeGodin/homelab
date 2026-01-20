@@ -1,0 +1,17 @@
+services:
+  podgrab:
+    image: akhilrex/podgrab:latest
+    container_name: podgrab
+    restart: always
+    ports:
+      - 8082:8080
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - CHECK_FREQUENCY=240
+    volumes:
+      - ${VOLUME_ROOT}/podgrab/config:/config
+      - ${DATA_ROOT}/podcasts:/assets
+    networks:
+      - homelab-network

@@ -1,0 +1,17 @@
+services:
+  calibre-web:
+    image: lscr.io/linuxserver/calibre-web:latest
+    container_name: calibre-web
+    restart: always
+    ports:
+      - 8083:8083
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - DOCKER_MODS=linuxserver/mods:universal-calibre
+    volumes:
+      - ${VOLUME_ROOT}/calibre-web/config:/config
+      - ${DATA_ROOT}/books:/books
+    networks:
+      - homelab-network
