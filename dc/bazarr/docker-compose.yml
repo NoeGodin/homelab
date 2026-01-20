@@ -3,8 +3,6 @@ services:
     image: lscr.io/linuxserver/bazarr:latest
     container_name: bazarr
     restart: always
-    env_file:
-      - ../../.env.common
     ports:
       - 6767:6767
     environment:

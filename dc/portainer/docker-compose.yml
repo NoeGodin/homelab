@@ -4,7 +4,6 @@ services:
     container_name: portainer
     restart: always
     env_file:
-      - ../../.env.common
       - .env
     ports:
       - "9443:9443"
