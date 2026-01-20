@@ -6,8 +6,7 @@ include:
 
   # --- Network & Security ---
   - dc/gluetun/docker-compose.yml
-  - dc/pihole/docker-compose.yml
-  - dc/authelia/docker-compose.yml
+  - dc/adguardhome/docker-compose.yml
 
   # --- Media Pipeline ---
   - dc/qbittorrent/docker-compose.yml
@@ -20,7 +19,6 @@ include:
   - dc/jellyseerr/docker-compose.yml
   - dc/podgrab/docker-compose.yml
   - dc/filebrowser/docker-compose.yml
-  - dc/tubearchivist/docker-compose.yml
 
   # --- Personal & Productivity ---
   - dc/mealie/docker-compose.yml
