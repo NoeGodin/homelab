@@ -20,4 +20,4 @@ services:
       - SERVER_COUNTRIES=${VPN_SERVER_COUNTRIES}
       - TZ=${TZ}
     networks:
-      - vpn-network
+      - homelab-network

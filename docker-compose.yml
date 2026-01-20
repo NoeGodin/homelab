@@ -33,7 +33,3 @@ networks:
   homelab-network:
     name: homelab-network
     driver: bridge
-
-  vpn-network:
-    name: vpn-network
-    driver: bridge
