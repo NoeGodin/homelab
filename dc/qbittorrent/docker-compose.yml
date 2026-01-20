@@ -3,8 +3,6 @@ services:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent-vpn
     restart: always
-    env_file:
-      - ../../.env.common
     network_mode: "container:gluetun"  # Routes traffic through Gluetun
     environment:
       - PUID=${PUID}

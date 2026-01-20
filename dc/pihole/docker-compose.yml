@@ -4,7 +4,6 @@ services:
     container_name: pihole
     restart: always
     env_file:
-      - ../../.env.common
       - .env
     ports:
       - "53:53/tcp"   # DNS TCP
