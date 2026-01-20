@@ -1,0 +1,16 @@
+services:
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:latest
+    container_name: mealie
+    restart: always
+    ports:
+      - 9925:9000
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - ALLOW_SIGNUP=true
+    volumes:
+      - ${VOLUME_ROOT}/mealie/data:/app/data
+    networks:
+      - homelab-network

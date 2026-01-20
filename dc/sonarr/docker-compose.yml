@@ -1,0 +1,16 @@
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    restart: always
+    ports:
+      - 8989:8989
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - ${VOLUME_ROOT}/sonarr/config:/config
+      - ${DATA_ROOT}:/data
+    networks:
+      - homelab-network
