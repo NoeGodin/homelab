@@ -3,6 +3,9 @@ services:
     image: qmcgaw/gluetun
     container_name: gluetun
     restart: always
+    env_file:
+      - ../../.env.common
+      - .env
     cap_add:
       - NET_ADMIN
     devices:
