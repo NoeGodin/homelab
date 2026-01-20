@@ -3,6 +3,9 @@ services:
     image: pihole/pihole:latest
     container_name: pihole
     restart: always
+    env_file:
+      - ../../.env.common
+      - .env
     ports:
       - "53:53/tcp"   # DNS TCP
       - "53:53/udp"   # DNS UDP
