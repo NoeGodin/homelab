@@ -1,7 +1,7 @@
 include:
   # --- Administration & Access ---
   - dc/nginx-proxy-manager/docker-compose.yml
-  - dc/heimdall/docker-compose.yml
+  - dc/glance/docker-compose.yml
   - dc/portainer/docker-compose.yml
 
   # --- Network & Security ---
