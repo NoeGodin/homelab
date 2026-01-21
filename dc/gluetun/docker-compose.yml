@@ -21,5 +21,6 @@ services:
       - WIREGUARD_PRESHARED_KEY=${VPN_WIREGUARD_PRESHARED_KEY}
       - SERVER_COUNTRIES=${VPN_SERVER_COUNTRIES}
       - TZ=${TZ}
+      - NETWORK_LOCAL=192.168.1.0/24,100.64.0.0/10 #put yours here
     networks:
       - homelab-network
