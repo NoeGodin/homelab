@@ -8,9 +8,14 @@ services:
     cap_add:
       - SYS_RAWIO
       - SYS_ADMIN
-    # Uncomment and add drives to monitor
-    # devices:
-    #   - "/dev/sda:/dev/sda"
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - SCRUTINY_COLLECTOR_AUTOMATIC_DETECTION=true
+    devices:
+      # - "/dev/sda:/dev/sda"        # Your Big data Drive
+      # - "/dev/mmcblk0:/dev/mmcblk0" # Your SD Card Drive
     volumes:
       - /run/udev:/run/udev:ro
       - ${VOLUME_ROOT}/scrutiny/config:/opt/scrutiny/config

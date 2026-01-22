@@ -1,0 +1,12 @@
+services:
+  vaultwarden:
+    container_name: vaultwarden
+    image: vaultwarden/server:latest
+    restart: always
+    environment:
+      - SIGNUPS_ALLOWED=true  # 'false' après pour securité
+      - DOMAIN=https://vault.godinlab.com
+    volumes:
+      - ${VOLUME_ROOT}/vaultwarden:/data
+    networks:
+      - homelab-network

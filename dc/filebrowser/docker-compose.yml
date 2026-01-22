@@ -3,11 +3,12 @@ services:
     image: filebrowser/filebrowser:latest
     container_name: filebrowser
     restart: always
+    user: "${PUID}:${PGID}"
     ports:
       - "8090:80"
     volumes:
-      - ${DATA_ROOT}:/srv
-      - ${VOLUME_ROOT}/filebrowser/filebrowser.db:/database.db
-      - ${EXTERNAL_SSD}:/ssd
+      - ${EXTERNAL_SSD}:/srv
+      - ${VOLUME_ROOT}/filebrowser:/config
+    command: ["--database", "/config/filebrowser.db"]
     networks:
       - homelab-network
