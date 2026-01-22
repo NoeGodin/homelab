@@ -7,6 +7,7 @@ include:
   # --- Network & Security ---
   - dc/gluetun/docker-compose.yml
   - dc/adguardhome/docker-compose.yml
+  - dc/vaultwarden/docker-compose.yml
 
   # --- Media Pipeline ---
   - dc/qbittorrent/docker-compose.yml
@@ -23,6 +24,7 @@ include:
   # --- Personal & Productivity ---
   - dc/mealie/docker-compose.yml
   - dc/calibre-web/docker-compose.yml
+  - dc/immich/docker-compose.yml
 
   # --- Monitoring ---
   - dc/netdata/docker-compose.yml
