@@ -1,0 +1,18 @@
+services:
+  duplicati:
+    image: lscr.io/linuxserver/duplicati:latest
+    container_name: duplicati
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - SETTINGS_ENCRYPTION_KEY=${SETTINGS_ENCRYPTION_KEY}
+    volumes:
+      - ${VOLUME_ROOT}/duplicati/config:/config
+      - ${VOLUME_ROOT}:/source/configs:ro
+      - ${EXTERNAL_SSD}/backups:/backups
+    ports:
+      - 8200:8200
+    restart: unless-stopped
+    networks:
+      - homelab-network
