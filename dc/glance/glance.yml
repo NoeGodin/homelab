@@ -1,0 +1,142 @@
+theme:
+  background-color: 0 0 16
+  primary-color: 43 59 81
+  positive-color: 61 66 44
+  negative-color: 6 96 59
+pages:
+  - name: Startpage
+    width: slim
+    hide-desktop-navigation: false
+    center-vertically: true
+    columns:
+      - size: full
+        widgets:
+          - type: search
+            autofocus: true
+            search-engine: google
+            new-tab: true
+            bangs:
+              - title: YouTube
+                shortcut: "!yt"
+                url: https://www.youtube.com/results?search_query={QUERY}
+              - title: Github
+                shortcut: "!gh"
+                url: https://github.com/search?q={QUERY}&type=repositories
+
+          - type: monitor
+            cache: 1m
+            title: Services
+            sites:
+              - title: Lecteur Vidéo
+                url: https://jellyfin.godinlab.com
+                check-url: http://jellyfin:8096
+                icon: di:jellyfin
+              - title: Catalogue
+                url: https://jellyseerr.godinlab.com
+                check-url: http://jellyseerr:5055
+                icon: di:jellyseerr
+              - title: Nourriture
+                url: https://mealie.godinlab.com
+                check-url: http://mealie:9000
+                icon: di:mealie
+              - title: Bibliothèque
+                url: https://calibre.godinlab.com
+                check-url: http://calibre-web:8083
+                icon: di:calibre
+              - title: Podcasts
+                url: https://podgrab.godinlab.com
+                check-url: http://podgrab:8080
+                icon: di:google-podcasts
+              - title: Photos
+                url: https://photos.godinlab.com
+                check-url: http://immich-server:2283
+                icon: di:immich
+
+  - name: Services
+    columns:
+      - size: full
+        widgets:
+          - type: monitor
+            title: Services
+            cache: 1m
+            sites:
+              - title: AdGuard Home
+                url: https://adguard.godinlab.com
+                check-url: http://adguard-ip:8080
+                icon: di:adguard-home
+              - title: Bazarr
+                url: https://bazarr.godinlab.com
+                check-url: http://bazarr:6767
+                icon: di:bazarr
+              - title: Calibre Web
+                url: https://calibre.godinlab.com
+                check-url: http://calibre-web:8083
+                icon: di:calibre
+              - title: Code Server
+                url: https://code.godinlab.com
+                check-url: http://code-server:8443
+                icon: di:code
+              - title: Duplicati
+                url: https://duplicati.godinlab.com
+                check-url: http://duplicati:8200
+                icon: di:duplicati
+              - title: File Browser
+                url: https://filebrowser.godinlab.com
+                check-url: http://filebrowser:80
+                icon: di:files
+              - title: Jellyfin
+                url: https://jellyfin.godinlab.com
+                check-url: http://jellyfin:8096
+                icon: di:jellyfin
+              - title: Jellyseerr
+                url: https://jellyseerr.godinlab.com
+                check-url: http://jellyseerr:5055
+                icon: di:jellyseerr
+              - title: Mealie
+                url: https://mealie.godinlab.com
+                check-url: http://mealie:9000
+                icon: di:mealie
+              - title: Netdata
+                url: https://netdata.godinlab.com
+                check-url: http://netdata:19999
+                icon: di:netdata
+              - title: Nginx Proxy Manager
+                url: https://nginx.godinlab.com
+                check-url: http://nginx-proxy-manager:81
+                icon: di:nginx
+              - title: Immich
+                url: https://photos.godinlab.com
+                check-url: http://immich-server:2283
+                icon: di:immich
+              - title: Podgrab
+                url: https://podgrab.godinlab.com
+                check-url: http://podgrab:8080
+                icon: di:google-podcasts
+              - title: Portainer
+                url: https://portainer.godinlab.com
+                check-url: http://portainer:9000
+                icon: di:portainer
+              - title: Prowlarr
+                url: https://prowlarr.godinlab.com
+                check-url: http://prowlarr:9696
+                icon: di:prowlarr
+              - title: qBittorrent
+                url: https://qbit.godinlab.com
+                check-url: http://gluetun:8080
+                icon: di:qbittorrent
+              - title: Radarr
+                url: https://radarr.godinlab.com
+                check-url: http://radarr:7878
+                icon: di:radarr
+              - title: Sonarr
+                url: https://sonarr.godinlab.com
+                check-url: http://sonarr:8989
+                icon: di:sonarr
+              - title: Uptime Kuma
+                url: https://status.godinlab.com
+                check-url: http://uptime-kuma:3001
+                icon: di:uptime-kuma
+              - title: Vaultwarden
+                url: https://vault.godinlab.com
+                check-url: http://vaultwarden:80
+                icon: di:vaultwarden
