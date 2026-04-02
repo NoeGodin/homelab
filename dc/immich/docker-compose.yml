@@ -3,7 +3,7 @@ services:
     container_name: immich_server
     image: ghcr.io/immich-app/immich-server:release
     volumes:
-      - ${EXTERNAL_SSD}/data/photos:/usr/src/app/upload
+      - ${STORAGE_ROOT}/data/photos:/usr/src/app/upload
       - /etc/localtime:/etc/localtime:ro
     env_file:
       - .env
