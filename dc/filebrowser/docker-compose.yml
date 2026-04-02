@@ -7,7 +7,7 @@ services:
     ports:
       - "8090:80"
     volumes:
-      - ${EXTERNAL_SSD}:/srv
+      - ${STORAGE_ROOT}:/srv
       - ${VOLUME_ROOT}/filebrowser:/config
     command: ["--database", "/config/filebrowser.db"]
     networks:

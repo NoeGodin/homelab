@@ -10,7 +10,7 @@ services:
     volumes:
       - ${VOLUME_ROOT}/duplicati/config:/config
       - ${VOLUME_ROOT}:/source/configs:ro
-      - ${EXTERNAL_SSD}/backups:/backups
+      - ${STORAGE_ROOT}/backups:/backups
     ports:
       - 8200:8200
     restart: unless-stopped

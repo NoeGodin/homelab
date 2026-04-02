@@ -28,7 +28,6 @@ include:
 
   # --- Monitoring ---
   - dc/netdata/docker-compose.yml
-  - dc/scrutiny/docker-compose.yml
   - dc/uptime-kuma/docker-compose.yml
 
   # --- Security & Updates ---
