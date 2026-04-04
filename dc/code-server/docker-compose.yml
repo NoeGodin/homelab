@@ -1,6 +1,7 @@
 services:
   code-server:
     image: lscr.io/linuxserver/code-server:latest
+    platform: linux/arm64
     container_name: code-server
     restart: always
     env_file:
