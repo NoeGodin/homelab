@@ -12,5 +12,6 @@ services:
     volumes:
       - ${VOLUME_ROOT}/bazarr/config:/config
       - ${MEDIA_ROOT}/movies:/movies
+      - ${MEDIA_ROOT}/tv:/tv
     networks:
       - homelab-network

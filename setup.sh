@@ -229,8 +229,12 @@ step_dirs() {
     mkdir -p "$d" && success "$d"
   done
 
-  if [ -n "$ssd" ] && [ ! -d "$ssd" ]; then
-    warn "Stockage non accessible : $ssd — monte-le avant de démarrer les services."
+  if [ -n "$ssd" ]; then
+    if mkdir -p "$ssd" 2>/dev/null; then
+      success "$ssd"
+    else
+      warn "Stockage non accessible : $ssd — monte-le avant de démarrer les services."
+    fi
   fi
 }
 
@@ -610,6 +614,7 @@ main() {
     local scheme; [ "${_NET_MODE:-web}" = "local" ] && scheme="http" || scheme="https"
     local glance_url="${scheme}://glance.${_DOMAIN:-mondomaine.com}"
     info "Glance : ${BOLD}${glance_url}${RESET}"
+
   fi
 }
 
