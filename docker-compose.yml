@@ -18,12 +18,9 @@ include:
   - dc/bazarr/docker-compose.yml
   - dc/jellyfin/docker-compose.yml
   - dc/jellyseerr/docker-compose.yml
-  - dc/podgrab/docker-compose.yml
   - dc/filebrowser/docker-compose.yml
 
   # --- Personal & Productivity ---
-  - dc/mealie/docker-compose.yml
-  - dc/calibre-web/docker-compose.yml
   - dc/immich/docker-compose.yml
 
   # --- Monitoring ---

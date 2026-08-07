@@ -35,18 +35,6 @@ pages:
                 url: https://jellyseerr.godinlab.com
                 check-url: http://jellyseerr:5055
                 icon: di:jellyseerr
-              - title: Nourriture
-                url: https://mealie.godinlab.com
-                check-url: http://mealie:9000
-                icon: di:mealie
-              - title: Bibliothèque
-                url: https://calibre.godinlab.com
-                check-url: http://calibre-web:8083
-                icon: di:calibre
-              - title: Podcasts
-                url: https://podgrab.godinlab.com
-                check-url: http://podgrab:8080
-                icon: di:google-podcasts
               - title: Photos
                 url: https://photos.godinlab.com
                 check-url: http://immich-server:2283
@@ -68,10 +56,6 @@ pages:
                 url: https://bazarr.godinlab.com
                 check-url: http://bazarr:6767
                 icon: di:bazarr
-              - title: Calibre Web
-                url: https://calibre.godinlab.com
-                check-url: http://calibre-web:8083
-                icon: di:calibre
               - title: Code Server
                 url: https://code.godinlab.com
                 check-url: http://code-server:8443
@@ -92,10 +76,6 @@ pages:
                 url: https://jellyseerr.godinlab.com
                 check-url: http://jellyseerr:5055
                 icon: di:jellyseerr
-              - title: Mealie
-                url: https://mealie.godinlab.com
-                check-url: http://mealie:9000
-                icon: di:mealie
               - title: Netdata
                 url: https://netdata.godinlab.com
                 check-url: http://netdata:19999
@@ -108,10 +88,6 @@ pages:
                 url: https://photos.godinlab.com
                 check-url: http://immich-server:2283
                 icon: di:immich
-              - title: Podgrab
-                url: https://podgrab.godinlab.com
-                check-url: http://podgrab:8080
-                icon: di:google-podcasts
               - title: Portainer
                 url: https://portainer.godinlab.com
                 check-url: http://portainer:9000
