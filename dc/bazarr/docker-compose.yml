@@ -11,7 +11,8 @@ services:
       - TZ=${TZ}
     volumes:
       - ${VOLUME_ROOT}/bazarr/config:/config
-      - ${MEDIA_ROOT}/movies:/movies
-      - ${MEDIA_ROOT}/tv:/tv
+      # Same 1:1 mount as sonarr/radarr, so paths Bazarr imports from them
+      # resolve as-is and no path mapping is needed. See CLAUDE.md.
+      - ${DATA_ROOT}:/data
     networks:
       - homelab-network
