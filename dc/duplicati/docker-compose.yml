@@ -9,6 +9,7 @@ services:
       - SETTINGS_ENCRYPTION_KEY=${SETTINGS_ENCRYPTION_KEY}
     volumes:
       - ${VOLUME_ROOT}/duplicati/config:/config
+      - ${VOLUME_ROOT}/duplicati/source:/source
       - ${VOLUME_ROOT}:/source/configs
       - ${STORAGE_ROOT}/backups:/backups
     ports:

@@ -9,6 +9,7 @@ services:
     volumes:
       - ${STORAGE_ROOT}:/srv
       - ${VOLUME_ROOT}/filebrowser:/config
+      - ${VOLUME_ROOT}/filebrowser/database:/database
     command: ["--database", "/config/filebrowser.db"]
     networks:
       - homelab-network
