@@ -630,3 +630,4 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,linux,macos,windows,sublimetext,visualstudio,webstorm+all,visualstudiocode
+.env.bak*

@@ -12,6 +12,7 @@ services:
       - ${VOLUME_ROOT}/duplicati/source:/source
       - ${VOLUME_ROOT}:/source/configs
       - ${STORAGE_ROOT}/backups:/backups
+      - /var/backups/homelab:/backups-sd
     ports:
       - 8200:8200
     restart: unless-stopped
